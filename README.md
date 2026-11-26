@@ -26,6 +26,10 @@ output.
 ### Setup the project
 
 - Download this template from github and open it in your favourite code editor.
+- Go inside the folder path and execute the following command:
+  ```
+    npm install
+  ```
 - In the root directory create a `.env` file and add the following env variables
   ```
       PORT=<port number of your choice>
@@ -36,31 +40,18 @@ output.
   ```
 - Inside the `src/config` folder create a file named as `config.json` and write the following code:
 
+- go inside the `src` folder and execute the following command:
+
   ```
-    {
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-  }
+    npx sequelize init
   ```
+
+- By executing the above command you will get migrations and seeders folder along with a config.json inside the config folder.
 
 - If you're setting up your development environment, then write the username of your DB and password of your DB and in dialect mention whatever DB you're using for ex: mysql, mariadb etc.
 - If you're setting up testor prod environment, make sure you also replace the host with the hosted DB url.
+
+- To run the server execute:
+  ```
+  npm run dev
+  ```
